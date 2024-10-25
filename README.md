@@ -1,6 +1,6 @@
 Small and dependency free [Javascript](https://js.org/) library to infer file type and MIME type checking the [magic numbers](https://en.wikipedia.org/wiki/Magic_number_(programming)#Magic_numbers_in_files) signature of a file or buffer.
 
-This is a Javascript port from [filetype](https://github.com/h2non/filetype) Go package.
+This is a Javascript port from [filetype](https://github.com/geofmureithi-zz/filetypes) NodeJS package.
 
 
 Features
@@ -16,12 +16,6 @@ Features
 - Cross-platform file recognition
 
 
-Installation
-------------
-
-    npm install filetypes
-
-
 API
 ---
 TODO
@@ -30,39 +24,6 @@ TODO
 Examples
 --------
 
-#### Simple file type checking
-
-```javascript
-const FileTypes = require('filetypes');
-//Just Check extension
-let extension = FileTypes.guessMineType('Nicki Minaj - Anaconda.mp4');
-/**
-{ name: 'mp4',
-  mine: 'video/mp4',
-  extension: 'mp4',
-  match: [Function: match] }
-*/
-//Check extension and Magic_numbers in file;
-let extension = FileTypes.guessMineType('../path/to/Nicki Minaj - Anaconda.mp4', true);
-
-//Check if extension is Supported
-FileTypes.isMineSupported("mp4")
-//true
-FileTypes.isMineSupported("xxs")
-//false
-
-
-```
-#### collective type checking
-
-```javascript
-let { isAudio, isImage, isArchive, isFont, isVideo } = require('filetypes');
-isAudio('../path/to/Nicki Minaj - Anaconda.mp4')
-//false
-isVideo('../path/to/Nicki Minaj - Anaconda.mp4')
-//true
-
-```
 
 Supported types
 ---------------
