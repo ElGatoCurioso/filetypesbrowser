@@ -464,6 +464,15 @@ const ContentDetector = function () {
               buffer[2] == 0x01 &&
               buffer[3] == 0x00)
           }
+        },
+        {
+          name: "svg", mine: "image/svg+xml", extension: "svg", match: (buffer) => {
+            return (buffer.length > 3 &&
+              buffer[0] == 60 &&
+              buffer[1] == 115 &&
+              buffer[2] == 118 &&
+              buffer[3] == 103)
+          }
         }
       ]
     },
